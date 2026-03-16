@@ -1,0 +1,5 @@
+name: Youtube_clone
+values:
+  - key: server
+    value: 'http://localhost:8000/api/v1'
+    enabled: true
