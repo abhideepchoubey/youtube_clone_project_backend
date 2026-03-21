@@ -1,0 +1,26 @@
+$kind: http-request
+name: login
+method: POST
+url: ""
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "test",
+      "password": "123456"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status code is 2xx', function () {
+        pm.expect(pm.response.code).to.be.within(200, 299);
+      });
+
+      pm.test('Response is JSON', function () {
+        pm.response.to.be.json;
+      });
+    language: text/javascript
+order: 1410814869637110
