@@ -1,5 +1,5 @@
 $kind: http-request
-name: login
+name: logout
 url: "{{server}}/users/logout"
 method: POST
 body:
@@ -15,4 +15,4 @@ body:
       value: "12345678"
       description: ""
       disabled: false
-order: 2945912127698599
+order: 3144404837510461
